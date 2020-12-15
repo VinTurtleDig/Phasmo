@@ -16,6 +16,9 @@ git clone https://github.com/VinTurtleDig/Phasmo.git folder_name
 I want to see if there are new changes to download from github:
 git fetch
 
+I want to put my changes on top of the stack of commits:
+git rebase origin/master
+
 I want to get new changes that were made to the project:
 git pull
 
@@ -29,3 +32,6 @@ git commit -m "Describe the changes you made."
 
 I want to push all the commits I made to github (final step, saves it online for others to pull/download):
 git push
+
+I want to see a list of all commits for this project:
+git log --oneline
