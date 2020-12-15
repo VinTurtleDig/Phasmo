@@ -1,0 +1,31 @@
+I want to see what folder I am in:
+pwd
+
+I want to see what's in this folder:
+ls
+
+I want to move to a different folder:
+cd "folder_name"
+
+I want to move to the parent folder:
+cd ..
+
+I want to download a project I don't have on my computer yet and put it into a new folder called... (this command will create a new folder):
+git clone https://github.com/VinTurtleDig/Phasmo.git folder_name
+
+I want to see if there are new changes to download from github:
+git fetch
+
+I want to get new changes that were made to the project:
+git pull
+
+I want to see a status of all the files I'm prepping to commit (preparation step 1):
+
+I want to add a file that I changed to prepare to push it (preparation step 2):
+git add file_name
+
+I want to save all the files I added as a commit and note what my changes are about (preparation step 3):
+git commit -m "Describe the changes you made."
+
+I want to push all the commits I made to github (final step, saves it online for others to pull/download):
+git push
