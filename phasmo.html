@@ -4,8 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Ghost Journal</title>
+
     <script src="phasmo_library.js"></script>
     <script src="PhasmoTranslateUserClue.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
+
     <style>
         body {
             background-image: url("JournalBackgroundv2.png");
@@ -16,24 +22,50 @@
             background-size: contain;
         }
 
+        #header {
+            height: 50px;
+        }
+
+        .generic-left-padding {
+            padding-left: 30px;
+        }
+
+        .ghost-font {
+            font-family: "Caveat";
+        }
     </style>
 </head>
 
 <body>
-    <h2>Clues</h2>
-    <label for="emf5">EMF 5</label>
-    <input type="checkbox" id="emf5" value="EMF 5"><br>
-    <label for="ghostOrb">Ghost Orb</label>
-    <input type="checkbox" id="ghostOrb" value="Ghost Orb"><br>
-    <label for="spiritBox">Spirit Box</label>
-    <input type="checkbox" id="spiritBox" value="Spirit Box"><br>
-    <label for="fingerprints">Fingerprints</label>
-    <input type="checkbox" id="fingerprints" value="Fingerprints"><br>
-    <label for="ghostWriting">Ghost Writing</label>
-    <input type="checkbox" id="ghostWriting" value="Ghost Writing"><br>
-    <label for="freezingTemp">Freezing Temperatures</label>
-    <input type="checkbox" id="freezingTemp" value="Freezing Temperatures"><br>
-
+    <div class="container ghost-font">
+        <div class="row">
+            <div id="header" class="col-6">
+                &nbsp;
+            </div>
+            <div class="col-6"></div>
+        </div>
+        <div class="row">
+            <div class="col-6 generic-left-padding">
+                <h2>Clues</h2>
+                <label for="emf5">EMF 5</label>
+                <input type="checkbox" id="emf5" value="EMF 5"><br>
+                <label for="ghostOrb">Ghost Orb</label>
+                <input type="checkbox" id="ghostOrb" value="Ghost Orb"><br>
+                <label for="spiritBox">Spirit Box</label>
+                <input type="checkbox" id="spiritBox" value="Spirit Box"><br>
+                <label for="fingerprints">Fingerprints</label>
+                <input type="checkbox" id="fingerprints" value="Fingerprints"><br>
+                <label for="ghostWriting">Ghost Writing</label>
+                <input type="checkbox" id="ghostWriting" value="Ghost Writing"><br>
+                <label for="freezingTemp">Freezing Temperatures</label>
+                <input type="checkbox" id="freezingTemp" value="Freezing Temperatures"><br>
+            </div>
+            <div class="col-6 generic-left-padding">
+                <h2>Ghosts</h2>
+            </div>
+        </div>
+    </div>
+    
     <script src="phasmo.js"></script>
 </body>
 
