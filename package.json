@@ -1,0 +1,32 @@
+{
+  "name": "phasmo_final",
+  "version": "1.0.0",
+  "description": "Tool for tracking clues for determining ghosts in Phasmophobia.",
+  "main": "node_init.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VinTurtleDig/Phasmo.git"
+  },
+  "keywords": [
+    "phasmo",
+    "Phasmophobia",
+    "heroku",
+    "node"
+  ],
+  "author": "Vin, Samus, and Marski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VinTurtleDig/Phasmo/issues"
+  },
+  "homepage": "https://github.com/VinTurtleDig/Phasmo#readme",
+  "engines": {
+    "node": "14.x"
+  }
+}
