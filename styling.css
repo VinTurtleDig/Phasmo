@@ -1,0 +1,74 @@
+/*MAIN BODY*/
+
+body {
+    background-image: url("JournalBackgroundv2.png");
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    background-size: contain;
+}
+
+#header {
+    height: 50px;
+}
+
+.generic-left-padding {
+    padding-left: 30px;
+}
+
+.ghost-font {
+    font-family: "Caveat";
+    font-size: 24px;
+}
+
+input[type=text] {
+    background-color: transparent;
+    border-top: transparent;
+    border-right: transparent;
+    border-left: transparent;
+    border-bottom: 2px solid rgb(46, 46, 46);
+}
+
+
+
+/*LEFT PAGE*/
+
+.talkToSpan {
+    margin-right: 50px;
+}
+
+.checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox .customCheckbox .customCheck {
+    padding-left: 2px;
+    line-height: 8px;
+    display: inline-block;
+    vertical-align: middle;
+    display: none;
+}
+
+.checkbox input:checked~.customCheckbox .customCheck {
+    display: block;
+}
+
+.customCheckbox {
+    position: absolute;
+    margin-left: 25px;
+    margin-top: 5px;
+    height: 15px;
+    width: 15px;
+    border-radius: 3px;
+    border: 1.5px solid rgba(46, 46, 46, 0.9);
+    background-color: transparent;
+}
+
+.checkbox:hover input~.customCheckbox {
+    background-color: rgba(46, 46, 46, 0.1);
+}

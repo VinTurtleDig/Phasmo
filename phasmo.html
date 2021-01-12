@@ -8,33 +8,14 @@
     <script src="phasmo_library.js"></script>
     <script src="PhasmoTranslateUserClue.js"></script>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
     <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
+    <link rel="stylesheet" href="styling.css"/>
 
-    <style>
-        body {
-            background-image: url("JournalBackgroundv2.png");
-            background-color: #000000;
-            background-repeat: no-repeat;
-            background-position: top;
-            background-attachment: fixed;
-            background-size: contain;
-        }
-
-        #header {
-            height: 50px;
-        }
-
-        .generic-left-padding {
-            padding-left: 30px;
-        }
-
-        .ghost-font {
-            font-family: "Caveat";
-            font-size: 24px;
-        }
-    </style>
 </head>
 
 <body>
@@ -47,19 +28,21 @@
         </div>
         <div class="row">
             <div class="col-6 generic-left-padding">
+                <h2>Info</h2>
+                <label for="ghost-name">Name:</label>
+                <input type="text" id="ghost-name" placeholder="Ghost Name..."><br><br>
+                <span class="talkToSpan"><label for="speaksAlone">Speaks alone</label>
+                    <input type="radio" id="speaksAlone" value="Speaks alone" name="talksTo"></span>
+                <span class="talkToSpan"><label for="speaksAll">Speaks to everyone</label>
+                    <input type="radio" id="speaksAll" value="Speaks to everyone" name="talksTo"></span><br><br>
+
                 <h2>Clues</h2>
-                <label for="emf5">EMF 5</label>
-                <input type="checkbox" id="emf5" value="EMF 5"><br>
-                <label for="ghostOrb">Ghost Orb</label>
-                <input type="checkbox" id="ghostOrb" value="Ghost Orb"><br>
-                <label for="spiritBox">Spirit Box</label>
-                <input type="checkbox" id="spiritBox" value="Spirit Box"><br>
-                <label for="fingerprints">Fingerprints</label>
-                <input type="checkbox" id="fingerprints" value="Fingerprints"><br>
-                <label for="ghostWriting">Ghost Writing</label>
-                <input type="checkbox" id="ghostWriting" value="Ghost Writing"><br>
-                <label for="freezingTemp">Freezing Temperatures</label>
-                <input type="checkbox" id="freezingTemp" value="Freezing Temperatures"><br>
+                <label class="checkbox" for="emf5">EMF 5<input type="checkbox" id="emf5" value="EMF 5"><span class="customCheckbox"><div class="customCheck">x</div></span></label><br>
+                <label class="checkbox" for="ghostOrb">Ghost Orb<input type="checkbox" id="ghostOrb"value="Ghost Orb"><span class="customCheckbox"><div class="customCheck">x</div></span></label><br>
+                <label class="checkbox" for="spiritBox">Spirit Box<input type="checkbox" id="spiritBox" value="Spirit Box"><span class="customCheckbox"><div class="customCheck">x</div></span></label><br>
+                <label class="checkbox" for="fingerprints">Fingerprints<input type="checkbox" id="fingerprints" value="Fingerprints"><span class="customCheckbox"><div class="customCheck">x</div></span></label><br>
+                <label class="checkbox" for="ghostWriting">Ghost Writing<input type="checkbox" id="ghostWriting" value="Ghost Writing"><span class="customCheckbox"><div class="customCheck">x</div></span></label><br>
+                <label class="checkbox" for="freezingTemp">Freezing Temperatures<input type="checkbox" id="freezingTemp" value="Freezing Temperatures"><span class="customCheckbox"><div class="customCheck">x</div></span></label>
             </div>
             <div class="col-6 generic-left-padding">
                 <h2>Ghosts</h2>
@@ -67,7 +50,7 @@
             </div>
         </div>
     </div>
-    
+
     <script src="phasmo.js"></script>
 </body>
 
