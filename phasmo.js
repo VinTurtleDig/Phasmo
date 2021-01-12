@@ -12,20 +12,65 @@ function getUserClues() {
 }
 
 function getClues() {
-    let emf5Button = false;
+    let boxButton = document.getElementById("spiritBox").checked;
+    let emfButton = document.getElementById("emf5").checked;
+    let printsButton = document.getElementById("fingerprints").checked;
+    let writingButton = document.getElementById("ghostWriting").checked;
+    let orbButton = document.getElementById("ghostOrb").checked;
     let tempButton = document.getElementById("freezingTemp").checked;
     let cls = [];
-    if(emf5Button == true) {
+    if(emfButton == true) {
         cls.push(EMF_LEVEL_5);
-    } else if (tempButton == true){
+    }
+    if (tempButton == true){
         cls.push(FREEZING_TEMPERATURES);
     }
+    if (boxButton == true){
+        cls.push(SPIRIT_BOX);
+    }
+    if (printsButton == true){
+        cls.push(FINGERPRINTS);
+    }
+    if (orbButton == true){
+        cls.push(GHOST_ORB);
+    }
+    if (writingButton == true){
+        cls.push(GHOST_WRITING);
+    }
+    console.log(cls)
     return cls;
 }
 
-function freezingTempsClick() {
-    
-}
+var freezingCheckbox = document.querySelector("input[id=freezingTemp]");
+
+freezingCheckbox.addEventListener('change', function() {
+    runPhasmoScript();
+});
+var orbCheckbox = document.querySelector("input[id=ghostOrb]");
+
+orbCheckbox.addEventListener('change', function() {
+    runPhasmoScript();
+});
+var writingCheckbox = document.querySelector("input[id=ghostWriting]");
+
+writingCheckbox.addEventListener('change', function() {
+    runPhasmoScript();
+});
+var printsCheckbox = document.querySelector("input[id=fingerprints]");
+
+printsCheckbox.addEventListener('change', function() {
+    runPhasmoScript();
+});
+var emfCheckbox = document.querySelector("input[id=emf5]");
+
+emfCheckbox.addEventListener('change', function() {
+    runPhasmoScript();
+});
+var spiritCheckbox = document.querySelector("input[id=spiritBox]");
+
+spiritCheckbox.addEventListener('change', function() {
+    runPhasmoScript();
+});
 
 function getMissingClues(ghostClues, userClues) {
     let missingC = [];
@@ -61,6 +106,7 @@ function runPhasmoScript(){
     let userClues = getClues();
 
     let ghosts = getGhostList();
+    document.getElementById("effectiveGhosts").innerHTML = "";
     ghosts.forEach(function(ghost){
         let ghostName = ghost.name;
         let ghostClues = ghost.clues;
@@ -68,15 +114,9 @@ function runPhasmoScript(){
         let couldBe = couldBeGhost(ghostClues, userClues);
         if(couldBe) {
             let missingClues = getMissingClues(ghostClues, userClues);
-            console.log(`${ghostName}: [${missingClues.join(", ")}]`);
+            document.getElementById("effectiveGhosts").innerHTML += `${ghostName}: [${missingClues.join(", ")}]<br>`;
+            // console.log("id=effectiveGhosts")
         }
     });
 }
-
-var freezingCheckbox = document.querySelector("input[id=freezingTemp]");
-
-freezingCheckbox.addEventListener('change', function() {
-    runPhasmoScript();
-});
-
 runPhasmoScript();
