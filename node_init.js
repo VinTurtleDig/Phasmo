@@ -14,7 +14,13 @@ http.createServer(function (req, res) {
         if(data === undefined) {
             return res.end();
         }
-        res.writeHead(200, { 'Content-Type': 'text/html' });
+        if(path.endsWith(".js")) {
+            res.writeHead(200, { 'Content-Type': 'text/javascript' });
+        } else if(path.endsWith(".css")) {
+            res.writeHead(200, { 'Content-Type': 'text/css' });
+        } else {
+            res.writeHead(200, { 'Content-Type': 'text/html' });
+        }
         res.write(data);
         return res.end();
     });
