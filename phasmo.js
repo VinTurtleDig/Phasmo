@@ -115,7 +115,6 @@ function runPhasmoScript(){
         if(couldBe) {
             let missingClues = getMissingClues(ghostClues, userClues);
             document.getElementById("effectiveGhosts").innerHTML += `${ghostName}: [${missingClues.join(", ")}]<br>`;
-            // console.log("id=effectiveGhosts")
         }
     });
 }
