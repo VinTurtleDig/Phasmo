@@ -10,16 +10,20 @@ body {
 }
 
 #header {
-    height: 50px;
+    height: 80px;
 }
 
-.generic-left-padding {
+.left-page-left-padding {
+    padding-left: 90px;
+}
+.right-page-left-padding {
     padding-left: 40px;
 }
 
 .ghost-font {
     font-family: "Caveat";
     font-size: 24px;
+    white-space: nowrap;
 }
 
 input[type=text] {
@@ -71,4 +75,53 @@ input[type=text] {
 
 .checkbox:hover input~.customCheckbox {
     background-color: rgba(46, 46, 46, 0.1);
+}
+
+.author-row {
+    font-size: 20px;
+}
+
+.author-col {
+    padding-left: 40px;
+}
+
+
+
+/* Smaller Screen */
+@media only screen and (max-width: 1000px) {
+    #header {
+        height: 40px;
+    }
+    .ghost-font {
+        font-size: 18px;
+    }
+    .left-page-left-padding {
+        padding-left: 30px;
+    }
+    .right-page-left-padding {
+        padding-left: 20px;
+    }
+    .author-col {
+        padding-left: 0px;
+    }
+    .author-row {
+        font-size: 16px;
+    }
+    .customCheckbox {
+        margin-top: 5px;
+    }
+    .checkbox .customCheckbox .customCheck {
+        padding-left: 1px;
+        line-height: 7px;
+    }
+}
+
+/* Large Screen */
+@media only screen and (min-width: 1400px) {
+    .left-page-left-padding {
+        padding-left: 40px;
+    }
+    .ghost-font {
+        /* font-size: 20px; */
+    }
 }
