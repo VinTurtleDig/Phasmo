@@ -121,7 +121,8 @@ input[type=text] {
     .left-page-left-padding {
         padding-left: 40px;
     }
-    .ghost-font {
-        /* font-size: 20px; */
+    .author-col {
+        margin-top: 200px;
+        padding-left: 100px;
     }
 }
