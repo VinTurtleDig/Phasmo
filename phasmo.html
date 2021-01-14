@@ -31,10 +31,21 @@
                 <h1>Info</h1>
                 <label for="ghost-name">Name:</label>
                 <input type="text" id="ghost-name" placeholder="Ghost Name..."><br><br>
-                <span class="talkToSpan"><label for="speaksAlone">Speaks alone</label>
-                    <input type="radio" id="speaksAlone" value="Speaks alone" name="talksTo"></span>
-                <span class="talkToSpan"><label for="speaksAll">Speaks to everyone</label>
-                    <input type="radio" id="speaksAll" value="Speaks to everyone" name="talksTo"></span><br><br>
+                
+                <span class="talkToSpan">
+                    <label class="radioButton">Speaks alone
+                        <input type="radio" name="talksTo">
+                        <span class="customRadioButton"></span>
+                    </label>
+                </span>
+
+                <span class="talkToSpan">
+                    <label class="radioButton">Speaks to everyone
+                        <input type="radio" name="talksTo">
+                        <span class="customRadioButton"></span>
+                    </label>
+                </span>
+                <br><br>
 
                 <h1>Clues</h1>
                 <label class="checkbox" for="emf5">EMF 5<input type="checkbox" id="emf5" value="EMF 5"><span class="customCheckbox"><div class="customCheck">x</div></span></label><br>
