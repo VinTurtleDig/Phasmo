@@ -137,6 +137,10 @@ function runPhasmoScript() {
     if(userClues.length == 0) {
         return;
     }
+    if(userClues.length > 3) {
+        document.getElementById("effectiveGhosts").innerHTML = `We can't identify your ghost. Please check your clues again.`;
+        return;
+    }
     if(userClues.length == 3) {
         let actualGhost = getActualGhost(userClues, ghosts);
         if(actualGhost == null) {
