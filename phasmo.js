@@ -115,12 +115,35 @@ function formatListOfClues(clues) {
     return formatted;
 }
 
+function getActualGhost(userClues, ghosts) {
+    let actualGhost = null;
+    ghosts.forEach(function (ghost) {
+        let ghostName = ghost.name;
+        let ghostClues = ghost.clues;
+
+        let couldBe = couldBeGhost(ghostClues, userClues);
+        if (couldBe) {
+            actualGhost = ghost;
+        }
+    });
+    return actualGhost;
+}
+
 function runPhasmoScript() {
     let userClues = getClues();
 
     let ghosts = getGhostList();
     document.getElementById("effectiveGhosts").innerHTML = "";
     if(userClues.length == 0) {
+        return;
+    }
+    if(userClues.length == 3) {
+        let actualGhost = getActualGhost(userClues, ghosts);
+        if(actualGhost == null) {
+            document.getElementById("effectiveGhosts").innerHTML = `We can't identify your ghost. Please check your clues again.`;
+        } else {
+            document.getElementById("effectiveGhosts").innerHTML = `Your ghost is a <b>${actualGhost.name}!</b>`;
+        }
         return;
     }
     document.getElementById("effectiveGhosts").innerHTML = "Your ghost could be...<br>";
