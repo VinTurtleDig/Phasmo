@@ -131,7 +131,45 @@ textarea{
     padding-left: 40px;
 }
 
+/* DROP DOWN STYLING */
 
+.objectiveOne{
+    margin: 0px;
+}
+
+.dropButton {
+  background-color:transparent;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: block;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: rgba(255, 255, 231, 0.8);
+  min-width: 160px;
+  bottom: 0px;
+  left: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdownContent a {
+  padding: 6px;
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdownContent a:hover {background-color: rgba(46, 46, 46, 0.2);}
+
+.dropdown:hover .dropdownContent {display: block;}
+
+.dropdown:hover .dropButton {background-color: transparent;}
 
 /* Smaller Screen */
 @media only screen and (max-width: 1000px) {
