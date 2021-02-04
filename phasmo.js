@@ -1,3 +1,7 @@
+$(document).ready(function(){
+    $('.ghostTooltip').tooltip();
+});
+
 function getUserClues() {
     let numClues = +prompt("How many clues do you have?");
     let userClues = [];
@@ -154,11 +158,12 @@ function runPhasmoScript() {
     ghosts.forEach(function (ghost) {
         let ghostName = ghost.name;
         let ghostClues = ghost.clues;
+        let tooltipText = "yargh! - " + ghost.name;//ghost.tooltipText;
 
         let couldBe = couldBeGhost(ghostClues, userClues);
         if (couldBe) {
             let missingClues = getMissingClues(ghostClues, userClues);
-            document.getElementById("effectiveGhosts").innerHTML += `${ghostName}. ${formatListOfClues(missingClues)}<br>`;
+            document.getElementById("effectiveGhosts").innerHTML += `<span class="ghostTooltip" data-toggle="tooltip" title="${tooltipText}">${ghostName}</span>. ${formatListOfClues(missingClues)}<br>`;
         }
     });
 }
