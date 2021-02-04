@@ -16,9 +16,7 @@ body {
 .left-page-left-padding {
     padding-left: 90px;
 }
-.right-page-left-padding {
-    padding-left: 40px;
-}
+
 
 .ghost-font {
     font-family: "Caveat";
@@ -116,12 +114,7 @@ input[type=text] {
     background-color: rgba(46, 46, 46, 0.1);
 }
 
-textarea{
-    background-color: transparent;
-    border-style: solid;
-    border-radius: 2px;
-    width: 90%;
-}
+
 
 .author-row {
     font-size: 20px;
@@ -171,6 +164,26 @@ textarea{
 
 .dropdown:hover .dropButton {background-color: transparent;}
 
+
+/* RIGHT PAGE */
+
+.right-page-left-padding {
+    padding-left: 70px;
+}
+
+#effectiveGhosts{
+    height: 400px;
+}
+
+/* Notes */
+
+textarea{
+    background-color: transparent;
+    border-style: solid;
+    border-radius: 2px;
+    width: 90%;
+}
+
 /* Smaller Screen */
 @media only screen and (max-width: 1000px) {
     #header {
@@ -204,6 +217,12 @@ textarea{
     .customRadioButton{
         margin-top: 7px;
         margin-left: 10px;
+    }
+    #effectiveGhosts{
+        height: 300px;
+    }
+    textarea{
+        width: 100%;
     }
 }
 
