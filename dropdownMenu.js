@@ -27,6 +27,27 @@
 //     option4DropdownItems[i].addEventListener('click', changeOption4Display, false);
 // }
 
+function setupShowDropdownClickListener(dropdownID, dropdownButtonID){
+    let dropdown = document.getElementById(dropdownID);
+    let dropdownButton = document.getElementById(dropdownButtonID);
+    dropdownButton.addEventListener("click",function(){
+        dropdown.classList.toggle("show");
+    },false);
+}
+
+window.onclick = function(event) {
+    if (!event.target.matches('.dropButton')) {
+      let dropdowns = document.getElementsByClassName("dropdownContent");
+      let i;
+      for (i = 0; i < dropdowns.length; i++) {
+        let openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+
 function setupObjectiveDropdownClickListener(displayId, dropdownItemClassName) {
     let toDisplay = document.getElementById(displayId);
     let dropdownItems = document.getElementsByClassName(dropdownItemClassName);
@@ -40,3 +61,7 @@ function setupObjectiveDropdownClickListener(displayId, dropdownItemClassName) {
 setupObjectiveDropdownClickListener("option2Display", "option2DropdownItem");
 setupObjectiveDropdownClickListener("option3Display", "option3DropdownItem");
 setupObjectiveDropdownClickListener("option4Display", "option4DropdownItem");
+
+setupShowDropdownClickListener("myDropdown2", "dropButton2");
+setupShowDropdownClickListener("myDropdown3", "dropButton3");
+setupShowDropdownClickListener("myDropdown4", "dropButton4");
