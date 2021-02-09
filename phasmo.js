@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('.ghostTooltip').tooltip();
+    $('body').tooltip({selector: '.ghostTooltip', delay: {show: 200, hide: 200}});
 });
 
 function getUserClues() {
