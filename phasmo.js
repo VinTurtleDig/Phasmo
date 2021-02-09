@@ -158,7 +158,8 @@ function runPhasmoScript() {
     ghosts.forEach(function (ghost) {
         let ghostName = ghost.name;
         let ghostClues = ghost.clues;
-        let tooltipText = "yargh! - " + ghost.name;//ghost.tooltipText;
+        console.log(ghost)
+        let tooltipText = ghost.weaknesses + "- " + ghost.name;
 
         let couldBe = couldBeGhost(ghostClues, userClues);
         if (couldBe) {
